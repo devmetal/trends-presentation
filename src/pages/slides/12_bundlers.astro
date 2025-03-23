@@ -4,19 +4,19 @@ import Image from "@components/Image.astro";
 import Slide from "@components/Slide.astro";
 import Text from "@components/Text.astro";
 import Card from "@components/Card.astro";
-import Bundlers from "@assets/bundlers.svg";
+import Bs from "@assets/bundlers.svg";
 import Transpilers from "@assets/transpilers.svg";
 ---
 
 <Layout>
   <Slide
-    next="/slides/other/2"
-    prev="/slides/ai/2"
+    next="/slides/13_trpc"
+    prev="/slides/11_ai"
     title="Bundlers / Compilers"
   >
     <div class="grid grid-cols-2 max-w-4xl gap-4">
       <Card list title="Bundlers">
-        <Image src={Bundlers.src} />
+        <Image src={Bs.src} />
         <Text>
           A frontend bundler optimizes and organizes project files for the
           browser, breaking code into manageable chunks. It reduces file sizes,

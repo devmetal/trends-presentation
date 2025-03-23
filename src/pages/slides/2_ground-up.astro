@@ -2,14 +2,13 @@
 import Layout from "../../layouts/Layout.astro";
 import Image from "../../components/Image.astro";
 import FigureA from "../../assets/figure-a.svg";
-import FigureA2 from "../../assets/figure-a2.svg";
 import Slide from "../../components/Slide.astro";
 import { fade, slide } from "astro:transitions";
 import Text from "../../components/Text.astro";
 ---
 
 <Layout>
-  <Slide next="/slides/servers-work" prev="/slides/agenda" title="Ground Up">
+  <Slide next="/slides/3_servers" prev="/slides/1_agenda" title="Ground Up">
     <div class="w-full max-w-3xl grid gap-2">
       <Text transition:animate={fade({ duration: "1s" })}>
         The client is typically the system that the end user sees and interacts

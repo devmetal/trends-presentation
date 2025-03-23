@@ -6,7 +6,7 @@ import Card from "../../components/Card.astro";
 ---
 
 <Layout>
-  <Slide next="/slides/ground-up" prev="/" title="Agenda">
+  <Slide next="/slides/2_ground-up" prev="/" title="Agenda">
     <div class="w-full max-w-3xl grid grid-cols-2 gap-8">
       <Card
         title="1. Ground up"
@@ -28,6 +28,7 @@ import Card from "../../components/Card.astro";
         title="5. Fullstack environment"
         transition:animate={fade({ duration: "1.8s" })}
       />
+      <Card title="6. AI" transition:animate={fade({ duration: "2s" })} />
     </div>
   </Slide>
 </Layout>

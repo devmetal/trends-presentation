@@ -6,22 +6,21 @@ import Text from "@components/Text.astro";
 import Card from "@components/Card.astro";
 import Engines from "@assets/engines-2.svg";
 import JsTs from "@assets/jsts.svg";
+import Ts1 from "@assets/ts-1.svg";
 ---
 
 <Layout>
-  <Slide
-    next="/slides/js-ts/2"
-    prev="/slides/backend-trends/2"
-    title="Js/Ts Trends"
-  >
+  <Slide next="/slides/8_js-news" prev="/slides/6_backend" title="Js/Ts Trends">
     <div class="grid grid-cols-3 max-w-5xl gap-4">
       <div class="w-full">
         <Image src={Engines.src} />
+
+        <Image simple src={Ts1.src} />
       </div>
       <div class="flex flex-col gap-2 col-span-2">
         <div class="flex items-center">
           <img src={JsTs.src} class="w-32" />
-          <Text>Both can run ts without any extra step.</Text>
+          <Text>Both can run ts/js without any extra step.</Text>
         </div>
         <div>
           <Text
@@ -37,6 +36,15 @@ import JsTs from "@assets/jsts.svg";
             fast.</Text
           >
         </div>
+        <Card title="Hot from TS 5.8">
+          <div class="flex flex-col gap-2">
+            <Text> --erasableSyntaxOnly </Text>
+            <Text> Granular Checks for Branches in Return Expressions </Text>
+            <Text>
+              Checked Returns for Conditional and Indexed Access Types
+            </Text>
+          </div>
+        </Card>
       </div>
     </div>
   </Slide>

@@ -46,12 +46,39 @@ const { next = "", prev = "", title } = Astro.props;
       }
     };
 
+    onClick = (ev: MouseEvent) => {
+      const next = this.dataset.next;
+      const prev = this.dataset.prev;
+
+      if (ev.button === 2) {
+        // right button
+        // navigate to prev
+        if (prev?.length) {
+          navigate(prev);
+        }
+      } else if (ev.button === 0) {
+        // left button
+        // navigate to next
+        if (next?.length) {
+          navigate(next);
+        }
+      } else {
+        // fallback
+        // navigate to next
+        if (next?.length) {
+          navigate(next);
+        }
+      }
+    };
+
     connectedCallback() {
       document.addEventListener("keydown", this.onKeydown);
+      document.addEventListener("click", this.onClick);
     }
 
     disconnectedCallback() {
       document.removeEventListener("keydown", this.onKeydown);
+      document.removeEventListener("click", this.onClick);
     }
   }
 

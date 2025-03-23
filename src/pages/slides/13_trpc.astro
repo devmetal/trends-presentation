@@ -2,16 +2,14 @@
 import Layout from "@layouts/Layout.astro";
 import Image from "@components/Image.astro";
 import Slide from "@components/Slide.astro";
-import Text from "@components/Text.astro";
-import Card from "@components/Card.astro";
-import Trpc from "@assets/trpc.svg";
+import TrpcImg from "@assets/trpc.svg";
 ---
 
 <Layout>
-  <Slide prev="/slides/other/1" title="Type safe frontend with trpc">
+  <Slide prev="/slides/12_bundlers" title="Type safe frontend with trpc">
     <div class="grid grid-cols-2 max-w-4xl gap-4">
       <div class="col-span-2">
-        <Image simple src={Trpc.src} />
+        <Image simple src={TrpcImg.src} />
       </div>
     </div>
   </Slide>
