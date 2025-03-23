@@ -11,18 +11,18 @@ const { next = "", prev = "", title } = Astro.props;
 ---
 
 <astro-slide
-  class="flex flex-col gap-8 w-full min-h-dvh justify-center items-center bg-gradient-to-r from-slate-300 to-slate-500 p-4"
+  class="flex flex-col w-full min-h-dvh items-center bg-gradient-to-r from-slate-300 to-slate-500 gap-4"
   data-next={base + next}
   data-prev={base + prev}
 >
-  {
-    title && (
-      <h1 class="text-3xl p-2 font-bold text-blue-950 absolute top-0 left-0 right-0 text-center backdrop-blur-sm bg-white/10">
-        {title}
-      </h1>
-    )
-  }
-  <slot />
+  <h1
+    class="text-3xl p-2 font-bold text-blue-950 w-full text-center backdrop-blur-sm bg-white/10"
+  >
+    {title}
+  </h1>
+  <div class="flex flex-col items-center justify-center gap-8">
+    <slot />
+  </div>
 </astro-slide>
 
 <script>
