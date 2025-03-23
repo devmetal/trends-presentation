@@ -1,0 +1,22 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Image from "@components/Image.astro";
+import Slide from "@components/Slide.astro";
+import Text from "@components/Text.astro";
+import Card from "@components/Card.astro";
+import V0 from "@assets/v0.png";
+import Cursor from "@assets/cursor.png";
+---
+
+<Layout>
+  <Slide next="/slides/ai/2" prev="/slides/fullstack/2" title="Ai tools">
+    <div class="flex flex-col max-w-4xl gap-4">
+      <div>
+        <Image src={V0.src} />
+      </div>
+      <div>
+        <Image src={Cursor.src} />
+      </div>
+    </div>
+  </Slide>
+</Layout>
