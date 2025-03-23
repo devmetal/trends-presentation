@@ -10,12 +10,12 @@ import Text from "../../components/Text.astro";
 
 <Layout>
   <Slide next="/slides/servers-work" prev="/slides/agenda" title="Ground Up">
-    <div class="w-full max-w-3xl grid gap-8">
-      <Text large transition:animate={fade({ duration: "1s" })}>
+    <div class="w-full max-w-3xl grid gap-2">
+      <Text transition:animate={fade({ duration: "1s" })}>
         The client is typically the system that the end user sees and interacts
         with
       </Text>
-      <Text large transition:animate={fade({ duration: "1s" })}>
+      <Text transition:animate={fade({ duration: "1s" })}>
         The server, often an HTTP server, secures the architecture, manages
         resources, handles client requests, and persists necessary data.
       </Text>

@@ -7,7 +7,7 @@ import Card from "../../components/Card.astro";
 
 <Layout>
   <Slide
-    next="/slides/figure-a2-slide"
+    next="/slides/backend-trends/1"
     prev="/slides/browser-work"
     title="Definitions"
   >
@@ -16,9 +16,9 @@ import Card from "../../components/Card.astro";
       transition:animate={fade({ duration: "0.5s" })}
     >
       <Card transition:animate={slide({ duration: "1s" })} title="Server">
-        The server is a system contains hardware and software and used for
-        sharing resources with the clients. The client can be a dedicated
-        software made for a specific server, or it can be a third party unknown
+        The server is a system comprising both hardware and software, designed
+        to share resources with clients. The client can either be a dedicated
+        application built for a specific server or an external, third-party
         entity.
       </Card>
       <Card
@@ -29,9 +29,9 @@ import Card from "../../components/Card.astro";
         with the clients.
       </Card>
       <Card transition:animate={slide({ duration: "1.5s" })} title="Client">
-        The client is a system contains hardware and software and used for
-        represent the state of a service. Often a end user product, and serves
-        as a human interface for communicate with the server.
+        The client is a system that includes hardware and software, used to
+        represent the state of a service. Often an end-user product, it serves
+        as the interface for communication with the server.
       </Card>
       <Card
         transition:animate={slide({ duration: "1.55s" })}
