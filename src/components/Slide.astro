@@ -1,0 +1,59 @@
+---
+import { fade, slide } from "astro:transitions";
+
+interface Props {
+  next?: string;
+  prev?: string;
+  title?: string;
+}
+
+const { next, prev, title } = Astro.props;
+---
+
+<astro-slide
+  class="flex flex-col gap-8 w-full min-h-dvh justify-center items-center bg-gradient-to-r from-slate-300 to-slate-500 p-4"
+  data-next={next}
+  data-prev={prev}
+>
+  {
+    title && (
+      <h1 class="text-3xl p-2 font-bold text-blue-950 absolute top-0 left-0 right-0 text-center backdrop-blur-sm bg-white/10">
+        {title}
+      </h1>
+    )
+  }
+  <slot />
+</astro-slide>
+
+<script>
+  import { navigate } from "astro:transitions/client";
+
+  class Slide extends HTMLElement {
+    onKeydown = (ev: KeyboardEvent) => {
+      const next = this.dataset.next;
+      const prev = this.dataset.prev;
+
+      if (ev.key === "ArrowLeft") {
+        // navigate to prev
+        if (prev?.length) {
+          navigate(prev);
+        }
+      } else if (ev.key === "ArrowRight") {
+        // navigate to next
+        if (next?.length) {
+          navigate(next);
+        }
+      }
+    };
+
+    connectedCallback() {
+      document.addEventListener("keydown", this.onKeydown);
+    }
+
+    disconnectedCallback() {
+      document.removeEventListener("keydown", this.onKeydown);
+    }
+  }
+
+  customElements.define("astro-slide", Slide);
+</script>

@@ -1,0 +1,51 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Image from "@components/Image.astro";
+import Slide from "@components/Slide.astro";
+import React from "@assets/react.svg";
+import Angular from "@assets/angular.svg";
+import Vue from "@assets/vue.svg";
+import Solid from "@assets/solid.svg";
+import Text from "@components/Text.astro";
+---
+
+<Layout>
+  <Slide
+    next="/slides/js-ts/5"
+    prev="/slides/js-ts/3"
+    title="Frontend Frameworks"
+  >
+    <div class="grid grid-cols-[128px_1fr] max-w-2xl gap-4">
+      <div>
+        <img class="w-full" src={React.src} />
+      </div>
+      <Text>
+        React 19 introduces significant updates, especially around React Server
+        Components (RSC) and Server Actions.
+      </Text>
+      <div>
+        <img class="w-full" src={Angular.src} />
+      </div>
+      <Text>
+        Angular is making a strong comeback with modernized tools and powerful
+        new features. One of the biggest additions is Signals, which offer a
+        more efficient and reactive state management approach.
+      </Text>
+      <div>
+        <img class="w-full" src={Vue.src} />
+      </div>
+      <Text>
+        Get strong in server side rendering. They announced the Vue 3.5. Lots of
+        improvements under the engine.
+      </Text>
+      <div>
+        <img class="w-full" src={Solid.src} />
+      </div>
+      <Text>
+        Solid was one of the hot topic in 2024. Gaining popularity. It fast and
+        using signals for state management. Also capable of server side
+        rendering.
+      </Text>
+    </div>
+  </Slide>
+</Layout>

@@ -1,0 +1,22 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Image from "@components/Image.astro";
+import Slide from "@components/Slide.astro";
+import Text from "@components/Text.astro";
+import Card from "@components/Card.astro";
+import Trpc from "@assets/trpc.svg";
+---
+
+<Layout>
+  <Slide
+    next="/slides/fullstack/3"
+    prev="/slides/fullstack/1"
+    title="Type safe frontend with trpc"
+  >
+    <div class="grid grid-cols-2 max-w-4xl gap-4">
+      <div class="col-span-2">
+        <Image simple src={Trpc.src} />
+      </div>
+    </div>
+  </Slide>
+</Layout>

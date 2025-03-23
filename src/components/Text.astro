@@ -1,0 +1,14 @@
+---
+interface Props {
+  large?: boolean;
+}
+
+const props = Astro.props;
+---
+
+<p
+  class={`text-blue-950 antialiased font-bold font-stretch-condensed p-4 py-2.5 bg-blue-100/30 rounded-md shadow-sm ${props.large ? "text-2xl" : ""}`}
+  {...props}
+>
+  <slot />
+</p>

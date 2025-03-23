@@ -1,0 +1,14 @@
+---
+interface Props {
+  src: string;
+  simple?: boolean;
+}
+
+const { src, simple = false } = Astro.props;
+---
+
+<div
+  class={`w-full ${!simple ? "rounded-md backdrop-blur-sm bg-white/10 shadow-md" : ""}`}
+>
+  <img src={src} class="w-full" />
+</div>

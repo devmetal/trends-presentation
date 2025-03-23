@@ -1,0 +1,26 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Image from "@components/Image.astro";
+import Slide from "@components/Slide.astro";
+import Text from "@components/Text.astro";
+import Card from "@components/Card.astro";
+import Fullstack from "@assets/fullstack.svg";
+import SsrFlow from "@assets/ssrflow.svg";
+---
+
+<Layout>
+  <Slide
+    next="/slides/fullstack/2"
+    prev="/slides/js-ts/5"
+    title="Server Side Rendering was Hot in 2024"
+  >
+    <div class="grid grid-cols-2 max-w-4xl gap-4">
+      <div class="col-span-2">
+        <Image src={Fullstack.src} />
+      </div>
+      <div class="col-span-2">
+        <Image src={SsrFlow.src} />
+      </div>
+    </div>
+  </Slide>
+</Layout>

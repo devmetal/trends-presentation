@@ -1,0 +1,42 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Image from "@components/Image.astro";
+import Slide from "@components/Slide.astro";
+import Text from "@components/Text.astro";
+import Card from "@components/Card.astro";
+import Bundlers from "@assets/bundlers.svg";
+import Transpilers from "@assets/transpilers.svg";
+---
+
+<Layout>
+  <Slide
+    next="/slides/fullstack/1"
+    prev="/slides/js-ts/4"
+    title="Bundlers / Compilers"
+  >
+    <div class="grid grid-cols-2 max-w-4xl gap-4">
+      <Card list title="Bundlers">
+        <Image src={Bundlers.src} />
+        <Text>
+          A frontend bundler optimizes and organizes project files for the
+          browser, breaking code into manageable chunks. It reduces file sizes,
+          improves performance, and handles dependencies and assets for
+          efficient loading and execution.
+        </Text>
+      </Card>
+      <Card list title="Transpilers">
+        <Image src={Transpilers.src} />
+        <Text>
+          A transpiler is a tool that converts non-standard syntax, like JSX or
+          TypeScript, into browser-compatible code. It’s commonly used in
+          conjunction with a bundler for efficient development.
+        </Text>
+      </Card>
+      <div class="col-span-2">
+        <Text large
+          >The hottest thing in this sector is the rspack and vite 6</Text
+        >
+      </div>
+    </div>
+  </Slide>
+</Layout>

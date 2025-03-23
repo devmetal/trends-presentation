@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Image from "../../components/Image.astro";
+import FigureA2 from "../../assets/figure-a2.svg";
+import Slide from "../../components/Slide.astro";
+import { slide, fade } from "astro:transitions";
+---
+
+<Layout>
+  <Slide
+    next="/slides/backend-trends/1"
+    prev="/slides/browser-work"
+    title="Check it again"
+  >
+    <div class="grid max-w-4xl gap-4">
+      <div class="w-full" transition:animate={fade({ duration: "1s" })}>
+        <Image src={FigureA2.src} />
+      </div>
+    </div>
+  </Slide>
+</Layout>

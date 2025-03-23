@@ -1,0 +1,25 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Image from "@components/Image.astro";
+import Slide from "@components/Slide.astro";
+import Text from "@components/Text.astro";
+import Card from "@components/Card.astro";
+import Hybrid from "@assets/hybrid.svg";
+---
+
+<Layout>
+  <Slide
+    next="/slides/js-ts/1"
+    prev="/slides/backend-trends/1"
+    title="SSR / SC / Hybrid / Stream"
+  >
+    <div class="grid grid-cols-2 max-w-5xl gap-4">
+      <div class="w-full">
+        <Image src={Hybrid.src} />
+      </div>
+      <Text large>
+        The new era of component based development starts on the server.
+      </Text>
+    </div>
+  </Slide>
+</Layout>

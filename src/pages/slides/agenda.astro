@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Slide from "../../components/Slide.astro";
+import { fade } from "astro:transitions";
+import Card from "../../components/Card.astro";
+---
+
+<Layout>
+  <Slide next="/slides/ground-up" prev="/" title="Agenda">
+    <div class="w-full max-w-3xl grid grid-cols-2 gap-8">
+      <Card
+        title="1. Ground up"
+        transition:animate={fade({ duration: "1s" })}
+      />
+      <Card
+        title="2. Backend trends"
+        transition:animate={fade({ duration: "2s" })}
+      />
+      <Card
+        title="3. JS/TS trends"
+        transition:animate={fade({ duration: "3s" })}
+      />
+      <Card
+        title="4. Frontend environment"
+        transition:animate={fade({ duration: "4s" })}
+      />
+      <Card
+        title="5. Fullstack environment"
+        transition:animate={fade({ duration: "5s" })}
+      />
+    </div>
+  </Slide>
+</Layout>

@@ -1,0 +1,65 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Slide from "../../components/Slide.astro";
+import { fade, slide } from "astro:transitions";
+import Card from "../../components/Card.astro";
+---
+
+<Layout>
+  <Slide
+    next="/slides/figure-a2-slide"
+    prev="/slides/browser-work"
+    title="Definitions"
+  >
+    <div
+      class="grid grid-cols-2 max-w-4xl gap-4"
+      transition:animate={fade({ duration: "0.5s" })}
+    >
+      <Card transition:animate={slide({ duration: "1s" })} title="Server">
+        The server is a system contains hardware and software and used for
+        sharing resources with the clients. The client can be a dedicated
+        software made for a specific server, or it can be a third party unknown
+        entity.
+      </Card>
+      <Card
+        transition:animate={slide({ duration: "1.15s" })}
+        title="Http Server"
+      >
+        A specific type of a server that uses http protocol for communication
+        with the clients.
+      </Card>
+      <Card transition:animate={slide({ duration: "1.5s" })} title="Client">
+        The client is a system contains hardware and software and used for
+        represent the state of a service. Often a end user product, and serves
+        as a human interface for communicate with the server.
+      </Card>
+      <Card
+        transition:animate={slide({ duration: "1.55s" })}
+        title="Http Client"
+      >
+        A specific type of client that uses http as main protocol for
+        communication with the server
+      </Card>
+      <Card title="Backend" transition:animate={slide({ duration: "1.70s" })}>
+        Backend can be described as:
+        <ol class="list-disc pl-6">
+          <li>Plarform (vsp, vercel, firebase)</li>
+          <li>Language (ts, js, go, php)</li>
+          <li>Database (psql, mongo)</li>
+          <li>Framework (laravel, django)</li>
+          <li>Api (rest, gql, trpc)</li>
+        </ol>
+      </Card>
+      <Card title="Frontend" transition:animate={slide({ duration: "1.75s" })}>
+        Backend can be described as:
+        <ol class="list-disc pl-6">
+          <li>Platform (mosty browser)</li>
+          <li>Language (mostly ts/js)</li>
+          <li>Framework (angular, react)</li>
+          <li>Design system (material, bt)</li>
+          <li>Rendering pattern (ssg, spa, ssr)</li>
+        </ol>
+      </Card>
+    </div>
+  </Slide>
+</Layout>
