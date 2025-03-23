@@ -1,19 +1,19 @@
 ---
-import { fade, slide } from "astro:transitions";
-
 interface Props {
   next?: string;
   prev?: string;
   title?: string;
 }
 
-const { next, prev, title } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const { next = "", prev = "", title } = Astro.props;
 ---
 
 <astro-slide
   class="flex flex-col gap-8 w-full min-h-dvh justify-center items-center bg-gradient-to-r from-slate-300 to-slate-500 p-4"
-  data-next={next}
-  data-prev={prev}
+  data-next={base + next}
+  data-prev={base + prev}
 >
   {
     title && (
