@@ -1,0 +1,36 @@
+---
+import Card from "@components/Card.astro";
+import Slide from "@components/Slide.astro";
+import Text from "@components/Text.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout>
+  <Slide title="About" prev="/" next="/slides/1_agenda">
+    <div class="w-2xl max-w-2xl grid grid-cols-[200px_1fr] gap-4">
+      <Text large>Name</Text>
+      <Text large>Metál Ádám</Text>
+
+      <div class="col-span-2">
+        <Text>Developer since 2011</Text>
+      </div>
+
+      <Text large>Current Work</Text>
+      <Text large>Fullstack Engineer at Colossyan</Text>
+
+      <div class="col-span-2">
+        <Card list title="Experience">
+          <Text>Fullstack mentor at Codecool</Text>
+          <Text>Staff frontend engineer at Docler</Text>
+          <div class="flex gap-2">
+            <Text>Lensa</Text>
+            <Text>Bene Studio</Text>
+            <Text>Attrecto</Text>
+            <Text>Nokia</Text>
+            <Text>...</Text>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </Slide>
+</Layout>
